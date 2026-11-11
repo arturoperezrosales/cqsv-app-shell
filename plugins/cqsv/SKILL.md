@@ -1,6 +1,6 @@
 ---
 name: cqsv
-description: Initialize a minimal CQSV Google Apps Script web app shell with Google account sign-in and server-enforced user access. Use when someone invokes `/cqsv init` or asks to start a CQSV Apps Script project from the approved shell.
+description: Initialize a minimal CQSV Google Apps Script web app shell with Google account sign-in and server-enforced user access. Use when someone invokes `/cqsv init`, `/cqsv:construir`, or asks to start a CQSV Apps Script project from the approved shell.
 argument-hint: "init [destination]"
 ---
 
@@ -18,7 +18,7 @@ When `$ARGUMENTS` starts with `init`:
 4. Check `node --version`, `npm --version`, and `clasp --version`. The template can be generated without Node, npm, or clasp. If a command is missing, leave the files in place and give the relevant setup steps from [references/prerequisites.md](references/prerequisites.md). Do not install packages automatically.
 5. Explain the next manual setup steps from [references/prerequisites.md](references/prerequisites.md). Do not run `clasp login`, `clasp create`, `clasp push`, or deploy without the user explicitly asking for that action in this session.
 
-If the user invokes `/cqsv` without `init`, explain the local-shell command `/cqsv init` and the guided deployment skill `/cqsv:publicar`. The deployment skill stops at any existing `.clasp.json` and never points to an existing Apps Script project by guessing. If arguments specify a different destination, preserve the exact path and resolve it relative to the current project root unless the user gave an absolute path.
+If the user invokes `/cqsv` without `init`, explain the requirement interview `/cqsv:construir`, local-shell command `/cqsv init`, and guided deployment skill `/cqsv:publicar`. The deployment skill stops at any existing `.clasp.json` and never points to an existing Apps Script project by guessing. If arguments specify a different destination, preserve the exact path and resolve it relative to the current project root unless the user gave an absolute path.
 
 ## Access and account boundaries
 

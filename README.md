@@ -1,29 +1,26 @@
 # CQSV Apps Script Shell
 
-Plugin público de Claude Code para iniciar una web app local de Google Apps Script con el shell CQSV.
+Plugin de Claude Code para iniciar y publicar una web app local de Google Apps Script con el shell CQSV.
 
 ## Instalar en Claude Desktop
 
 1. Abre **Customize → Plugins** y selecciona **Add marketplace**.
-2. Agrega el repositorio `arturoperezrosales/cqsv-app-shell`.
-3. Agrega el plugin `cqsv`.
-4. Abre **Code** y elige la carpeta local del proyecto.
+2. Agrega `arturoperezrosales/cqsv-app-shell` y el plugin `cqsv`.
+3. Abre **Code** y elige la carpeta local del proyecto.
 
-## Iniciar el proyecto
+## Flujo de trabajo
 
-En la carpeta elegida, ejecuta `/cqsv init`. Claude crea `Code.gs`, `Index.html` y `appsscript.json`. Este paso no conecta con Google ni despliega.
+1. **Definir la necesidad:** ejecuta `/cqsv:construir`. Claude hace preguntas sencillas, una por una, resume el requisito y espera tu confirmación antes de escribir código.
+2. **Crear el shell:** ejecuta `/cqsv init`. Claude prepara los archivos locales de Apps Script sin conectarse a Google.
+3. **Publicar:** ejecuta `/cqsv:publicar`. Claude verifica requisitos, te guía en el login de Google y prepara una implementación nueva, inicialmente privada para la cuenta propietaria.
 
-## Conectar y publicar
+La skill de construcción puede guardar el brief confirmado en `docs/requisito.md`. Usa ejemplos inventados; no compartas datos financieros reales durante la práctica.
 
-Cuando el shell esté listo, ejecuta `/cqsv:publicar`. Claude guía la instalación de lo que falte, inicia el login de Google, pide confirmación antes de crear un proyecto Apps Script independiente, sube los archivos revisados y prepara una implementación con acceso solo para la cuenta propietaria.
+## Acceso y protección
 
-El primer acceso requiere que la persona propietaria ejecute una vez `bootstrapInitialAdmin` desde el editor de Apps Script. Claude abre el editor y la guía. La skill nunca amplía la audiencia a todo el dominio ni habilita acceso anónimo.
-
-La sesión de Claude usa la cuenta iniciada en Claude Desktop. La web app identifica a las personas con su cuenta Google; son accesos separados.
-
-## Protección del proyecto
-
-- Si la carpeta ya contiene `.clasp.json`, la skill se detiene para no modificar un proyecto existente.
+- El acceso inicial de Apps Script queda limitado a la persona propietaria. El primer acceso requiere ejecutar `bootstrapInitialAdmin` una vez desde el editor; Claude guía ese paso.
+- La skill de publicación se detiene si encuentra un `.clasp.json` existente para evitar modificar otro proyecto.
 - El archivo `.clasp.json` contiene el vínculo al proyecto Apps Script y se mantiene local, fuera de Git.
 - El manifiesto inicia con `MYSELF` y ejecuta como `USER_ACCESSING`.
-- Node.js 20 o posterior es requisito para clasp. Si falta, Claude explica cómo instalarlo desde la fuente oficial y espera a que esté disponible.
+- Node.js 20 o posterior es requisito para clasp. Si falta, Claude explica cómo instalarlo y espera a que esté disponible.
+- La sesión de Claude y el login Google de la app son cuentas distintas.
