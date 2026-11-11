@@ -1,0 +1,14 @@
+{
+  "name": "gan-cqsv-app-shell",
+  "description": "Plugin de Claude Code para iniciar el shell local de Apps Script de CQSV",
+  "owner": {
+    "name": "Arturo Pérez Rosales"
+  },
+  "plugins": [
+    {
+      "name": "cqsv",
+      "source": "./plugins/cqsv",
+      "description": "Genera el shell de Apps Script para CQSV con identidad Google y controles de acceso"
+    }
+  ]
+}
