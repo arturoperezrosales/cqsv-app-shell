@@ -1,0 +1,8 @@
+{
+  "name": "cqsv",
+  "description": "Initialize the CQSV Google Apps Script shell for local development and clasp",
+  "version": "1.0.0",
+  "author": {
+    "name": "Arturo Pérez Rosales"
+  }
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <base target="_top">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{color-scheme:light;--bg:#f4f7f5;--paper:#fff;--ink:#203536;--muted:#647776;--faint:#85918e;--line:#dce5e0;--accent:#167565;--accent-dark:#105b50;--accent-soft:#e5f1ed;--side:#183b38;--side-hover:#244945;--side-text:#edf5f1;--danger:#a33838;--danger-bg:#faeceb;--shadow:0 8px 24px rgba(28,54,48,.08);font-family:Inter,"Segoe UI",Arial,sans-serif}
+    *{box-sizing:border-box}html,body{min-height:100%;margin:0}body{background:var(--bg);color:var(--ink);font:14px/1.5 Inter,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #d8a94b;outline-offset:2px}::selection{background:#a8d7c7;color:#173330}.app{min-height:100vh;display:grid;grid-template-columns:248px minmax(0,1fr)}.side{background:var(--side);color:var(--side-text);padding:24px 16px;display:flex;flex-direction:column;gap:26px}.brand{display:flex;align-items:center;gap:12px;padding:2px 5px}.brand-mark{width:42px;height:42px;background:#fff;border-radius:10px;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:8px;flex:none}.brand-mark i{display:block;border-radius:3px;background:var(--accent)}.brand-mark i:nth-child(2){background:#79aa8e}.brand-mark i:nth-child(3){background:#c7ac6d}.brand-mark i:nth-child(4){background:#51777a}.brand-copy strong{display:block;font-size:13px;letter-spacing:.1em}.brand-copy span{display:block;margin-top:3px;color:#b9cec6;font-size:10px;letter-spacing:.04em}.nav{display:grid;gap:5px}.nav button{width:100%;border:0;border-radius:8px;text-align:left;padding:10px 12px;color:#cedbd6;background:transparent}.nav button:hover,.nav button[aria-current="page"]{background:var(--side-hover);color:#fff}.side-foot{margin-top:auto;color:#b9cec6;font-size:12px;line-height:1.5}.side-foot b{display:block;color:#fff;font-weight:600}.main{min-width:0;display:flex;flex-direction:column}.top{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--paper);border-bottom:1px solid var(--line);padding:17px clamp(20px,4vw,42px)}.top h1{margin:0;font-size:19px;letter-spacing:-.02em}.top p{margin:2px 0 0;color:var(--muted);font-size:12px}.account{max-width:45%;overflow-wrap:anywhere;text-align:right;color:var(--muted);font-size:12px}.content{width:min(100%,1060px);margin:0 auto;padding:clamp(22px,4vw,42px);flex:1}.welcome{margin-bottom:24px}.welcome h2{font-size:clamp(24px,3vw,33px);letter-spacing:-.035em;line-height:1.15;margin:0 0 7px}.welcome p{color:var(--muted);margin:0;max-width:66ch}.panel{background:var(--paper);border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow);padding:22px;margin-bottom:18px}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px}.panel h3{margin:0;font-size:16px}.panel-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.pill{display:inline-flex;align-items:center;border-radius:30px;background:var(--accent-soft);color:var(--accent-dark);padding:4px 9px;font-size:12px;font-weight:600}.empty{min-height:250px;display:grid;place-items:center;text-align:center;border:1px dashed #b8c9c1;border-radius:10px;padding:24px}.empty strong{font-size:16px}.empty p{color:var(--muted);margin:5px 0 0}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left}th{padding:10px 9px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--line)}td{padding:11px 9px;border-bottom:1px solid #edf1ee;vertical-align:middle}tr:last-child td{border-bottom:0}.small{font-size:12px;color:var(--muted)}.form-row{display:grid;grid-template-columns:1.2fr 1.3fr 1fr auto;gap:10px;align-items:end;margin:4px 0 18px}.field label{display:block;margin-bottom:5px;color:var(--muted);font-size:12px;font-weight:600}.field input,.field select{width:100%;height:40px;padding:0 10px;background:#fff;border:1px solid #bdcbc5;border-radius:7px;color:var(--ink)}.btn{min-height:39px;border:1px solid #c4d1cb;border-radius:7px;background:#fff;color:var(--ink);padding:8px 13px;font-weight:600}.btn:hover{background:#f0f5f2}.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-dark);color:#fff}.btn-danger{color:var(--danger);border-color:#e1c2c0}.btn-small{min-height:32px;padding:5px 9px;font-size:12px}.gate{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 0%,#e5f1ed 0,#f4f7f5 54%)}.gate-card{width:min(100%,470px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:34px}.gate-mark{width:48px;height:48px;border-radius:12px;background:var(--side);display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:10px;margin-bottom:24px}.gate-mark i{display:block;background:#8fc6ad;border-radius:3px}.gate-mark i:nth-child(2){background:#d4bd7b}.gate-mark i:nth-child(3){background:#f1f5f0}.gate-mark i:nth-child(4){background:#5c9990}.gate-card h1{font-size:24px;line-height:1.2;letter-spacing:-.03em;margin:0 0 9px}.gate-card p{margin:0;color:var(--muted)}.gate-card .account-id{margin-top:16px;padding:10px 12px;border-radius:8px;background:#f2f6f3;color:#314c47;font-size:13px;overflow-wrap:anywhere}.gate-actions{margin-top:20px}.error{color:var(--danger)!important}.toast{position:fixed;right:20px;bottom:20px;padding:11px 15px;background:#203b35;color:#fff;border-radius:8px;box-shadow:var(--shadow);z-index:5}.hidden{display:none!important}.footer{padding:12px clamp(20px,4vw,42px);color:var(--faint);font-size:11px;border-top:1px solid var(--line);background:var(--paper)}
+    @media(max-width:800px){.app{grid-template-columns:1fr}.side{padding:12px 16px;gap:12px}.brand{padding:0}.brand-mark{width:34px;height:34px;padding:6px}.nav{display:flex;flex-wrap:wrap}.nav button{width:auto;padding:8px 10px}.side-foot{display:none}.top{padding:14px 18px}.content{padding:22px 16px}.form-row{grid-template-columns:1fr 1fr}.form-row .btn{grid-column:1/-1}.account{max-width:40%}}
+    @media(max-width:480px){.brand-copy strong{font-size:12px}.top h1{font-size:16px}.top p{font-size:11px}.panel{padding:16px}.form-row{grid-template-columns:1fr}.form-row .btn{grid-column:auto}.panel-head{flex-direction:column}.gate-card{padding:26px}.account{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div id="root"><div class="gate"><section class="gate-card"><div class="gate-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h1>Comprobando tu cuenta…</h1><p>La app identifica tu sesión de Google y verifica los accesos.</p></section></div></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script>
+    const state = { session: null, users: [], view: 'home' };
+    const roles = { ADMIN: 'Administración', EDITOR: 'Edición', VIEWER: 'Consulta' };
+    const root = document.getElementById('root');
+
+    function runServer(name, payload, onSuccess) {
+      let call = google.script.run.withSuccessHandler(onSuccess).withFailureHandler(showError);
+      if (payload === undefined) call[name](); else call[name](payload);
+    }
+
+    function showError(error) {
+      const message = error && error.message ? error.message : 'Ocurrió un error. Vuelve a intentarlo.';
+      toast(message.replace(/^Error:\s*/, ''));
+    }
+
+    function toast(message) {
+      const el = document.getElementById('toast');
+      el.textContent = message;
+      el.classList.remove('hidden');
+      window.clearTimeout(toast.timer);
+      toast.timer = window.setTimeout(() => el.classList.add('hidden'), 4200);
+    }
+
+    function start() { runServer('getCurrentSession', undefined, renderGateOrApp); }
+
+    function renderGateOrApp(session) {
+      state.session = session;
+      if (!session || session.status !== 'ready') {
+        const copy = {
+          'identity-unavailable': ['No pudimos identificar tu cuenta de Google', 'Abre esta app con la cuenta de Google autorizada. Si el problema continúa, el propietario debe revisar la identidad de ejecución y la política de Workspace.'],
+          'setup-required': ['Falta configurar el acceso inicial', 'El propietario debe ejecutar bootstrapInitialAdmin desde el editor de Apps Script mientras la implementación solo permita acceso al propietario.'],
+          'denied': ['Tu cuenta aún no tiene acceso', 'Pide al administrador de esta app que habilite tu cuenta. Esta plantilla no pide ni guarda contraseñas.']
+        }[session && session.status] || ['No se pudo verificar el acceso', 'Recarga la página o pide apoyo a la persona administradora.'];
+        root.innerHTML = `<main class="gate"><section class="gate-card"><div class="gate-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h1>${escapeHtml(copy[0])}</h1><p>${escapeHtml(copy[1])}</p>${session && session.email ? `<div class="account-id">Cuenta de Google<br><strong>${escapeHtml(session.email)}</strong></div>` : ''}<div class="gate-actions"><button class="btn" type="button" onclick="start()">Volver a comprobar</button></div></section></main>`;
+        return;
+      }
+      renderApp();
+    }
+
+    function renderApp() {
+      const user = state.session.user;
+      root.innerHTML = `<div class="app"><aside class="side"><div class="brand"><div class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="brand-copy"><strong>CQSV</strong><span>ÁREA DE TRABAJO</span></div></div><nav class="nav" aria-label="Secciones"><button type="button" aria-current="${state.view === 'home' ? 'page' : 'false'}" onclick="setView('home')">Inicio</button>${user.role === 'ADMIN' ? `<button type="button" aria-current="${state.view === 'access' ? 'page' : 'false'}" onclick="setView('access')">Usuarios y accesos</button>` : ''}</nav><div class="side-foot"><b>${escapeHtml(user.name || user.email)}</b>${escapeHtml(user.roleLabel)}<br>${escapeHtml(APP_VERSION)}</div></aside><div class="main"><header class="top"><div><h1>${state.view === 'access' ? 'Usuarios y accesos' : 'Área de trabajo'}</h1><p>Sesión de Google verificada · ${escapeHtml(user.roleLabel)}</p></div><div class="account">${escapeHtml(user.email)}</div></header><main class="content">${state.view === 'access' ? renderAccess() : renderHome(user)}</main><footer class="footer">${escapeHtml(APP_BRAND)} · Shell inicial · ${escapeHtml(APP_VERSION)}</footer></div></div>`;
+      if (state.view === 'access') runServer('listAccessUsers', undefined, users => { state.users = users || []; if (state.session && state.session.user.role === 'ADMIN') updateAccessTable(); });
+    }
+
+    function renderHome(user) {
+      return `<section class="welcome"><h2>Hola, ${escapeHtml(user.name || user.email)}.</h2><p>La cuenta está habilitada y la estructura inicial está lista. Esta plantilla no trae módulos ni datos de negocio.</p></section><section class="empty"><div><strong>El espacio de trabajo está vacío</strong><p>Aquí se agregará la herramienta que defina el equipo.</p></div></section>`;
+    }
+
+    function renderAccess() {
+      return `<section class="welcome"><h2>Personas autorizadas</h2><p>La lista se valida en el servidor en cada llamada. Ocultar un botón no concede ni revoca permisos.</p></section><section class="panel"><div class="panel-head"><div><h3>Agregar o actualizar una cuenta</h3><p>Usa el correo de Google con el que abrirá la web app.</p><p class="small">Los roles son una base para el shell; el template todavía no incluye módulos de negocio.</p></div><span class="pill">Solo administración</span></div><form class="form-row" onsubmit="saveUser(event)"><div class="field"><label for="user-name">Nombre</label><input id="user-name" name="name" maxlength="100" required></div><div class="field"><label for="user-email">Correo de Google</label><input id="user-email" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="user-role">Rol</label><select id="user-role" name="role"><option value="VIEWER">Consulta</option><option value="EDITOR">Edición</option><option value="ADMIN">Administración</option></select></div><button class="btn btn-primary" type="submit">Guardar acceso</button></form><div class="table-wrap"><table><thead><tr><th>Persona</th><th>Rol</th><th>Estado</th><th></th></tr></thead><tbody id="access-rows"><tr><td colspan="4" class="small">Cargando accesos…</td></tr></tbody></table></div></section>`;
+    }
+
+    function updateAccessTable() {
+      const body = document.getElementById('access-rows');
+      if (!body) return;
+      if (!state.users.length) { body.innerHTML = '<tr><td colspan="4" class="small">No hay cuentas registradas.</td></tr>'; return; }
+      body.innerHTML = state.users.map(user => `<tr><td><strong>${escapeHtml(user.name)}</strong><div class="small">${escapeHtml(user.email)}</div></td><td>${escapeHtml(user.roleLabel)}</td><td>${user.active ? '<span class="pill">Activo</span>' : '<span class="small">Desactivado</span>'}</td><td><button class="btn btn-small ${user.active ? 'btn-danger' : ''}" type="button" onclick="toggleUser('${escapeJs(user.email)}',${!user.active})">${user.active ? 'Desactivar' : 'Reactivar'}</button></td></tr>`).join('');
+    }
+
+    function saveUser(event) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const payload = { name: data.get('name'), email: data.get('email'), role: data.get('role'), active: true };
+      runServer('saveAccessUser', payload, users => { state.users = users || []; updateAccessTable(); form.reset(); toast('Acceso guardado.'); });
+    }
+
+    function toggleUser(email, active) {
+      const current = state.users.find(user => user.email === email);
+      if (!current) return;
+      runServer('saveAccessUser', { name: current.name, email: current.email, role: current.role, active: active }, users => { state.users = users || []; updateAccessTable(); toast(active ? 'Acceso reactivado.' : 'Acceso desactivado.'); });
+    }
+
+    function setView(view) { state.view = view; renderApp(); }
+    function escapeHtml(value) { return String(value == null ? '' : value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
+    function escapeJs(value) { return String(value).replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+    const APP_VERSION = '0.1.0';
+    const APP_BRAND = 'COMPROMISO QUE SUMA VALOR';
+    start();
+  </script>
+</body>
+</html>
