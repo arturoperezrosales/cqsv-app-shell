@@ -11,7 +11,7 @@ Plugin de Claude Code para iniciar y publicar una web app local de Google Apps S
 ## Flujo de trabajo
 
 1. **Definir la necesidad:** ejecuta `/cqsv:construir`. Claude hace preguntas sencillas, una por una, resume el requisito y espera tu confirmación antes de escribir código.
-2. **Crear el shell:** ejecuta `/cqsv init`. Claude prepara los archivos locales de Apps Script sin conectarse a Google.
+2. **Elegir dónde vivirá:** `/cqsv init` pregunta si necesitas una app con su propia pantalla, una hoja de cálculo o un documento. También puedes indicarlo al iniciar, por ejemplo `/cqsv init app`. El shell de app y su skill de publicación están listos; Sheets y Docs requieren un flujo de inicio propio.
 3. **Publicar:** ejecuta `/cqsv:publicar`. Claude verifica requisitos, te guía en el login de Google y prepara una implementación nueva, inicialmente privada para la cuenta propietaria.
 
 La skill de construcción puede guardar el brief confirmado en `docs/requisito.md`. Usa ejemplos inventados; no compartas datos financieros reales durante la práctica.
