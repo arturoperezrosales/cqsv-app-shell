@@ -7,6 +7,7 @@ La skill `/cqsv:publicar` se encarga del trabajo técnico. La persona revisa las
 - Abre en Claude Desktop → **Code** la carpeta que contiene el shell de CQSV.
 - La carpeta debe contener `src/Code.gs`, `src/Index.html` y `src/appsscript.json`.
 - Si falta el shell, primero inicia con `/cqsv init`.
+- No necesitas cuenta de GitHub. Para publicar se usa tu cuenta de Google.
 - Si ya existe `.clasp.json`, no continúes con esta carpeta: está conectada a un proyecto Apps Script. Pide apoyo antes de modificarla.
 
 ## Si falta una herramienta

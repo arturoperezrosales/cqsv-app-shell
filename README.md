@@ -8,6 +8,8 @@ Plugin de Claude Code para iniciar y publicar una web app local de Google Apps S
 2. Agrega `arturoperezrosales/cqsv-app-shell` y el plugin `cqsv`.
 3. Abre **Code** y elige la carpeta local del proyecto.
 
+No necesitas cuenta de GitHub: el repositorio es público. Si quieres crear una, ejecuta `/cqsv github` y Claude te guía paso a paso. Tú haces el registro en tu navegador.
+
 ## Flujo de trabajo
 
 1. **Definir la necesidad:** ejecuta `/cqsv:construir`. Claude hace preguntas sencillas, una por una, resume el requisito y espera tu confirmación antes de escribir código.
